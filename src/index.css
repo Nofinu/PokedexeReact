@@ -1,3 +1,7 @@
+:root {
+  --RedPokedex-- :rgb(211, 7, 7);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,90 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.GlobalContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.pokemonContainer{
+  margin: 5px 5px;
+  text-align: center;
+  border: solid black 1px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pokemonTitle{
+  margin: 0;
+  background-color: var(--RedPokedex--);
+  color: white;
+  height: 20%;
+}
+
+
+.modalBackground{
+  display: block;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.705);
+}
+
+.modalContant{
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.footerModalPokedex,.headerModalPokedex{
+  width: 100%;
+  background-color: var(--RedPokedex--);
+  height: 26px;
+}
+
+.divBorderLeft,.divBorderRight{
+  width: 26px;
+  background-color: var(--RedPokedex--);
+}
+
+.headerModalPokedex{
+  padding: 10px;
+  z-index: 2;
+}
+
+.headerModalPokedex>button{
+  margin-left: 95%;
+  border: transparent;
+  border-radius: 5px;
+  padding: 5px 8px 5px 8px;
+}
+
+.ContainerPokemonDisplay{
+  text-align: center;
+  margin-left: 20px;
+}
+
+.ContainerPokemonDisplay>p{
+  margin: 0;
+}
+
+.imgType{
+  height: 15px;
+}
+
