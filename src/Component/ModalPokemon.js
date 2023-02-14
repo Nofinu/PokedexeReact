@@ -1,7 +1,4 @@
 
-
-
-
 export function ModalPokemon (props){
   const importAll=(r)=> {
     let images = {};
@@ -25,24 +22,17 @@ export function ModalPokemon (props){
         <button className="fa-sharp fa-solid fa-xmark" onClick={onClickBtn}> </button>
         </div>
 
-        <div className="divBorderLeft"></div>
-
-        <div className="ContainerPokemonDisplay">
+        <div className="containerPokemonDisplay">
           <p>{props.pokemonName} n°: {idpokemon[6]}</p>
           <img src={props.modalPokemon.info.sprites.front_default} alt="un truc"></img>
         </div>
-        <div>
+        <div className="containerPokemonType">
           {
-            props.modalPokemon.info.types.map((elem,i) =><img className="imgType" src={images["Type_"+elem.type.name]} key={i}></img>)
+            props.modalPokemon.info.types.map((elem,i) =><img src={images["Type_"+elem.type.name]} key={i}></img>)
           }
         </div>
 
-          <div className="divBorderRight"></div>
-
-        <div className="footerModalPokedex">
-
         </div>
       </div>
-    </div>
   )
 }

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const urlapi ="https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
+const urlapi ="https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
 
 export const getInfoPokedex = () =>{
   return axios.get(urlapi);

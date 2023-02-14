@@ -16,8 +16,9 @@ export class PokemonComponent extends Component{
     })
   }
 
-  onClickDiv=(e)=>{
-    this.props.AffichageModalPokemon(this.state.pokemonData,this.props.pokemon.name)
+  onClickDiv=()=>{
+    const pokemonData = {...this.state.pokemonData}
+    this.props.AffichageModalPokemon(pokemonData,this.props.pokemon.name)
   }
 
   render(){
