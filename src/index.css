@@ -84,7 +84,7 @@ code {
 
 .containerPokemonDisplay{
   text-align: center;
-  width: 45%;
+  width: 35%;
   margin-left: 26px;
   border: solid black 1px;
   background-color: bisque;
@@ -97,9 +97,8 @@ code {
 }
 
 .containerPokemonType{
-  width: 45%;
+  width: 22%;
   background-color: white;
-  border-radius: 0px 10px 10px 0px;
   border: solid black 1px;
 }
 
@@ -107,3 +106,22 @@ code {
   height: 15px;
 }
 
+.containerEncounter>h4,.containerPokemonType>h4{
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-left: 2px;
+}
+
+.containerEncounter>ul,.containerPokemonType>ul{
+  padding-left: 8px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.containerEncounter{
+  width: 35%;
+  background-color: white;
+  border-radius: 0px 10px 10px 0px;
+  border: solid black 1px;
+}
