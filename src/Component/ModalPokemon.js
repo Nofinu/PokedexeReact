@@ -14,7 +14,13 @@ export function ModalPokemon (props){
     props.FermetureModalPokemon()
   }
 
-  const searchEncounter=()=>{
+
+
+  const [PokemonEncounter,setPokemonEncounter]=useState([])
+  const [testUrl,setTestUrl] = useState(false)
+  const urlPokemonEncounter = "https://pokeapi.co/api/v2/pokemon/"+props.pokemonName+"/encounters"
+
+  useEffect(()=>{
     if(!testUrl){
       setTestUrl(true)
       getInfoPokemon(urlPokemonEncounter).then(res => {
@@ -26,19 +32,10 @@ export function ModalPokemon (props){
         }
       })
     }
-  }
-
-  const [PokemonEncounter,setPokemonEncounter]=useState([])
-  const [testUrl,setTestUrl] = useState(false)
-  const urlPokemonEncounter = "https://pokeapi.co/api/v2/pokemon/"+props.pokemonName+"/encounters"
-
-  useEffect(()=>{
-    searchEncounter()
     return()=> {
       setPokemonEncounter([])
-      setTestUrl(false)
     }
-    },[])
+    },[urlPokemonEncounter,testUrl])
 
   const images = importAll( require.context('../asset', false, /\.(png|jpe?g|svg)$/))
   const idpokemon = props.modalPokemon.info.species.url.split("/")
