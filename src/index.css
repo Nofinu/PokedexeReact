@@ -53,10 +53,11 @@ code {
 }
 
 .modalContant{
-  width: 85%;
+  width: 1000px;
   height: 500px;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 65px;
+  margin-left: 100px;
   background-color: white;
   display: flex;
   flex-direction: row;
