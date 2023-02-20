@@ -14,6 +14,11 @@ export function ModalPokemon (props){
     props.FermetureModalPokemon()
   }
 
+  const OnclickExtModal =(e)=>{
+    if(e.target === e.currentTarget){
+      props.FermetureModalPokemon()
+    }
+  }
 
 
   const [PokemonEncounter,setPokemonEncounter]=useState([])
@@ -39,9 +44,9 @@ export function ModalPokemon (props){
 
   const images = importAll( require.context('../asset', false, /\.(png|jpe?g|svg)$/))
   const idpokemon = props.modalPokemon.info.species.url.split("/")
-  console.log(PokemonEncounter)
+  // console.log(PokemonEncounter)
   return(
-    <div className="modalBackground">
+    <div className="modalBackground" onClick={OnclickExtModal}>
       <div className="modalContant">
 
         <div className="headerModalPokedex">
