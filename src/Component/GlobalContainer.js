@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { createPortal } from "react-dom";
 import { getInfoPokedex } from "../services/data.services";
 import { ModalPokemon } from "./ModalPokemon";
 import { PokemonComponent } from "./PokemonComponent";
@@ -41,7 +42,7 @@ export class GlobalContainer extends Component{
         }
 
         {
-          this.state.modalStatus && <ModalPokemon FermetureModalPokemon={this.FermetureModalPokemon} pokemonName={this.state.modalPokemon.name} modalPokemon={this.state.modalPokemon}></ModalPokemon>
+          this.state.modalStatus && createPortal(<ModalPokemon FermetureModalPokemon={this.FermetureModalPokemon} pokemonName={this.state.modalPokemon.name} modalPokemon={this.state.modalPokemon}></ModalPokemon>,document.getElementById("modal-root"))
         }
       </div>
     )
